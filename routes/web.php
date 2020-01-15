@@ -30,3 +30,4 @@ Route::resources([
 
 
 Route::get('/cart/add/{product}', 'CartController@add')->name('cart.add');
+Route::get('/api/add/', 'ApiController@products')->name('api.products');
