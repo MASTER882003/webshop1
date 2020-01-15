@@ -13,9 +13,9 @@ class ProductCategory extends Migration
      */
     public function up()
     {
-        Schema::create('product_category', function (Blueprint $table) {
+        Schema::create('category_product', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string ('product_id');
+            $table->integer ('product_id');
             $table->integer('category_id');
             $table->timestamps();
         });

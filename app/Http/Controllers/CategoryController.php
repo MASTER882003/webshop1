@@ -52,13 +52,12 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $products = $category->products();
-        foreach($products as $product){
-            dd($product->name);
-        }
-        dd("Hat nicht funktioniert");
-
-        return view('category.show',['category'=>$category]);
+        $products = $category->products()->get();
+        return view('category.show',
+        [
+            'category'=>$category,
+            'products'=>$products
+        ]);
     }
 
     /**

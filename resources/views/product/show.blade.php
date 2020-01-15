@@ -1,4 +1,8 @@
 <h1>{{$product->name}}</h1>
+
+@foreach($categories as $category)
+    - {{$category->name}} <br>
+@endforeach
 <br>
 <price>{{$product->price}}</price>
 <p>
